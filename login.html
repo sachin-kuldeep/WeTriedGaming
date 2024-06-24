@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>We Tried Gaming | Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #778103;
+    }
+
+    .container1 {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/login_page.jpg);
+      background-size: contain;
+      background-position: center;
+      background-attachment: fixed;
+      margin-left: 0%;
+    }
+
+    .container2 {
+      display: inline-block;
+      position: relative;
+      width: 550px;
+      height: auto;
+      padding: 30px;
+      background-color: #3c3c3c;
+      margin: 0 auto;
+      top: 5%;
+      left: 35%;
+      margin-top: 100px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container2 h2 {
+      padding-bottom: 20px;
+      font-size: xx-large;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      margin-left: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 20px;
+      font-size: large;
+      padding-left: 2.5px;
+    }
+
+    .form-group input {
+      width: 92%;
+      padding: 13px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      margin-left: 2.5px;
+    }
+
+    .form-group-checkbox label {
+      font-size: large;
+      padding-left: 9px;
+    }
+
+    .form-group button {
+      width: 96.5%;
+      padding: 12px;
+      background-color: #778103;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: large;
+      margin-top: 50px;
+      margin-left: 2.5px;
+    }
+
+    .form-group button:hover {
+      background-color: #5b6305;
+    }
+
+    .sign-up{
+      margin: 15px;
+    }
+
+    .sign-up a{
+      text-decoration: underline;
+      color: #fff;
+      font-size: large;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0;
+      background-color: #778103;
+    }
+
+    .logo-section .fas {
+      font-size: 6rem;
+      color: #fefefe;
+      background-color: #778103;
+    }
+
+    .logo-section h1 {
+      width: 250px;
+      font-size: 2rem;
+      color: #ffffff;
+      margin-left: 10px;
+      background-color: #778103;
+    }
+  </style>
+  <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+  <div class="logo-section">
+    <i class="fas fa-gamepad"></i>
+    <h1>WeTriedGaming</h1>
+  </div>
+  <div class="container1">
+    <div class="container2">
+      <h2>Welcome Back!</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username :</label>
+          <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password :</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group-checkbox">
+          <label>
+            <input type="checkbox" name="remember" id="remember"> Remember username
+          </label>
+        </div>
+        <div class="sign-up">
+          New user? <a href="signup.html">Sign up Now</a>
+        </div>
+        <div class="form-group">
+          <button type="submit">Let's Go!</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const remember = document.getElementById('remember').checked;
+
+      if (username.trim() === '') {
+        alert('Please enter your username.');
+        return;
+      }
+
+      if (password.trim() === '') {
+        alert('Please enter your password.');
+        return;
+      }
+
+      // Predefined set of credentials for login comparison
+      // const validUsername = 'admin';
+      // const validPassword = 'password';
+      let logins = {"admin": "password"}
+      for (credit in logins) {
+
+        if (username === credit && password === logins[credit]) {
+          // Successful login
+          alert('Login successful!');
+
+          // TODO: Redirect or perform further actions after successful login
+          window.open("games.html", EventTarget = "_parent");
+
+          // Reset the form
+          form.reset();
+          break;
+        } else {
+          // Invalid credentials
+          alert('Invalid username or password.');
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

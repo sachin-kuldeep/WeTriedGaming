@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
+
+        body {
+            background-color: #778103;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        .logo-section .fas {
+            font-size: 6rem;
+            color: #fefefe;
+        }
+
+        .logo-section h1 {
+            width: 250px;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-left: 10px;
+        }
+
+        .section-1 {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.712)),
+                url(../images/ttt2.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .section-1-wrapper {
+            width: 70%;
+            margin: auto;
+        }
+
+        .section-1 h1 {
+            width: 500px;
+            color: #FEC53A;
+            font-size: 1.5rem;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .section-1-img {
+            display: flex;
+
+        }
+
+        .img:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Section 3 starts here */
+        .game-categories {
+            width: 70%;
+            margin: 50px auto;
+            position: relative;
+            padding-top: 50px;
+        }
+
+        .game-wrapper {
+            display: flex;
+        }
+
+        .gw {
+            width: 240px;
+            height: 240px;
+            background: url(../images/tttlogo.jpg);
+            background-size: cover;
+            background-position: center;
+            margin: 40px 120px 0 120px;
+            border-radius: 120px;
+        }
+
+        .gw:hover {
+            transform: translateY(-10px);
+        }
+
+        .left {
+            position: relative;
+            right: -140px;
+        }
+
+        .gw-1 {
+            background: url(../images/chesslogo.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        footer {
+            width: 100%;
+            height: 55vh;
+            background: #282828;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .footer-body {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-logo {
+            height: 12vh;
+            width: 300px;
+            background-color: #778103;
+            color: #ffffff;
+            line-height: 1.7rem;
+            clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
+        }
+
+        .footer-logo .fas {
+            font-size: xx-large;
+        }
+
+        ul h3 {
+            color: #fff;
+            font-weight: 450;
+        }
+
+        ul li {
+            list-style: none;
+            line-height: 2.5rem;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        ul li a .fab {
+            font-size: 1.2rem;
+            color: #02b23a;
+            margin-right: 15px;
+        }
+
+        ul li a:hover {
+            color: #FEC53A;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            height: 7vh;
+            background: #1B1919;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom span {
+            color: #FEC53A;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <div class="logo-section">
+        <i class="fas fa-gamepad"></i>
+        <h1>WeTriedGaming</h1>
+    </div>
+
+    <section class="section-1">
+        <div class="section-1-wrapper">
+        </div>
+
+        <div class="game-categories">
+            <div class="game-wrapper">
+                <a href="chess.html">
+                    <div class="gw gw-1"></div>
+                </a>
+            </div>
+
+            <div class="game-wrapper left">
+                <a href="tttoe.html">
+                    <div class="gw gw-6"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-body">
+            <div class="logo footer-logo">
+                <i class="fas fa-gamepad"></i>
+                <h1>WeTried
+                    Gaming</h1>
+            </div>
+
+            <ul>
+                <h3>Get In Touch</h3>
+                <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i>Linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>Copyright &copy; All Right Reserved | Designed <span>By WeTriedCoding</span> 2023</p>
+    </div>
+
+</body>
+
+</html>
